@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Segoe UI";
+  src: url("fonts/segoeuithis.ttf");
+}
+
+@layer components {
+  .text-outline {
+    paint-order: stroke fill;
+    -webkit-text-stroke: 1.5px black;
+  }
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+}
