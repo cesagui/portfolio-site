@@ -32,12 +32,14 @@ function Desktop () {
 
     return (
         <div
-            className="h-screen w-screen grid grid-flow-col gap-x-1 gap-y-2 justify-start content-start bg-center bg-no-repeat"
+            className="w-screen grid p-1 grid-flow-col gap-x-1 gap-y-f2 justify-start content-start bg-center bg-no-repeat"
             style={{ 
+                height: 'calc(100vh - 40px)',
+                overflowY: 'auto',
                 backgroundImage: `url(${Aurora})`, 
                 backgroundSize: '100% 100%',
-                gridTemplateRows: 'repeat(auto-fill, 90px)',
-                gridAutoColumns: '80px'
+                gridTemplateRows: 'repeat(auto-fill, 85px)',
+                gridAutoColumns: '70px'
             }}
         >
             {desktopIcons.map((icon, index) => (
