@@ -5,6 +5,8 @@ import VistaPC from '../assets/vista-icons/vista_pc_2.ico'
 import VistaNotes from '../assets/vista-icons/vista_sticky_notes.ico'
 import VistaFolder from '../assets/vista-icons/folder.ico'
 import VistaDocument from '../assets/vista-icons/text_document.ico'
+import TaskManager from '../assets/vista-icons/task_manager.ico'
+import InternetExplorer from '../assets/vista-icons/internet_explorer.ico'
 import DesktopIcon from './desktop_icon'
 
 function Desktop () {
@@ -15,20 +17,31 @@ function Desktop () {
         { image: VistaDocument, name: 'Resume' },
         { image: VistaNotes, name: 'Sticky Notes' },
         { image: MessengerIcon, name: 'Windows Messenger' },
+        { image: TaskManager, name: 'Task Manager' },
+        { image: InternetExplorer, name: 'Internet Explorer' },
+        { image: InternetExplorer, name: 'Internet Explorer' },
+        
+        { image: InternetExplorer, name: 'Internet Explorer' },
+        
+        { image: InternetExplorer, name: 'Internet Explorer' },
+        
+        { image: InternetExplorer, name: 'Internet Explorer' },
+        
+        { image: InternetExplorer, name: 'Internet Explorer' },
     ]
 
     return (
         <div
-            className="h-screen w-screen grid gap-x-3 justify-start bg-center bg-no-repeat"
+            className="h-screen w-screen grid grid-flow-col gap-x-1 gap-y-2 justify-start content-start bg-center bg-no-repeat"
             style={{ 
                 backgroundImage: `url(${Aurora})`, 
                 backgroundSize: '100% 100%',
-                gridAutoRows: '90px',
-                gridAutoColumns: '100px'
+                gridTemplateRows: 'repeat(auto-fill, 90px)',
+                gridAutoColumns: '80px'
             }}
         >
-            {desktopIcons.map((icon) => (
-                <DesktopIcon key={icon.name} image={icon.image} name={icon.name} />
+            {desktopIcons.map((icon, index) => (
+                <DesktopIcon key={`${icon.name}-${index}`} image={icon.image} name={icon.name} />
             ))}
         </div>
     )
