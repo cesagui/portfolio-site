@@ -7,7 +7,9 @@ import VistaFolder from '../assets/vista-icons/folder.ico'
 import VistaDocument from '../assets/vista-icons/text_document.ico'
 import TaskManager from '../assets/vista-icons/task_manager.ico'
 import InternetExplorer from '../assets/vista-icons/internet_explorer.ico'
+import { useState } from 'react'
 import DesktopIcon from './desktop_icon'
+import Window from './window/Window'
 
 function Desktop () {
     const desktopIcons = [
@@ -30,7 +32,19 @@ function Desktop () {
         { image: InternetExplorer, name: 'Internet Explorer' },
     ]
 
+    const [windows, setWindows] = useState([])
+
+    function openWindow(name) {
+        const id = Date.now()
+        setWindows((s) => [...s, { id, name }])
+    }
+
+    function closeWindow(id) {
+        setWindows((s) => s.filter((w) => w.id !== id))
+    }
+
     return (
+        <>
         <div
             className="w-screen grid p-1 grid-flow-col gap-x-1 gap-y-f2 justify-start content-start bg-center bg-no-repeat"
             style={{ 
@@ -43,9 +57,14 @@ function Desktop () {
             }}
         >
             {desktopIcons.map((icon, index) => (
-                <DesktopIcon key={`${icon.name}-${index}`} image={icon.image} name={icon.name} />
+                <DesktopIcon key={`${icon.name}-${index}`} image={icon.image} name={icon.name} onDoubleClick={openWindow} />
             ))}
         </div>
+
+        {windows.map((w) => (
+            <Window key={w.id} id={w.id} name={w.name} onClose={closeWindow} />
+        ))}
+        </>
     )
 }
 

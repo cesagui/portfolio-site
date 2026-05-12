@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react"
 import DesktopIconImage from "./DesktopIconImage"
 
-function DesktopIcon({ image, name }) {
+function DesktopIcon({ image, name, onDoubleClick }) {
     const [selected, setSelected] = useState(false)
     const ref = useRef(null)
 
@@ -20,9 +20,10 @@ function DesktopIcon({ image, name }) {
         <div
             ref={ref}
             onClick={() => setSelected(true)}
+            onDoubleClick={() => onDoubleClick && onDoubleClick(name)}
             className={`flex flex-col items-center justify-center h-full border rounded-md cursor-pointer
                 ${selected
-                    ? "bg-[rgba(255,255,255,0.15)] border-white"
+                    ? "bg-[rgba(255,255,255,0.25)] border-white"
                     : "border-transparent hover:bg-[rgba(255,255,255,0.08)] hover:border-white/40"
                 }`}
         >
