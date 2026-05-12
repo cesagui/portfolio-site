@@ -10,6 +10,16 @@
   src: url("fonts/segoeuithibd.ttf");
 }
 
+@font-face {
+  font-family: "CMUSerif";
+  src: url("fonts/cmunrm.ttf");
+}
+
+@font-face {
+  font-family: "CMU Bold";
+  src: url("fonts/cmunbx.ttf");
+}
+
 
 @layer components {
   .text-outline {

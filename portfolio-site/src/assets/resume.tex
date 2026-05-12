@@ -1,0 +1,168 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Cesar Aguirre} \\ \vspace{1pt}
+    \small 916-250-9134 $|$ \href{mailto:cesar.aguirre.work@gmail.com}{\underline{cesar.aguirre.work@gmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/cesar-aguirre-930202385/}{\underline{linkedin.com/in/cesar-aguirre}} $|$
+    \href{https://github.com/cesagui/}{\underline{github.com/cesagui}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of California, Davis}{Davis, CA}
+      {B.S. in Computer Science}{Expected June 2026}
+      \resumeItemListStart
+        \resumeItem{\textbf{Relevant Coursework:} Machine Learning, Computer Networks, Operating Systems, Computer Architecture, Data Structures \& Algorithms, Algorithm Design \& Analysis, Probability Theory, Linear Algebra}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: JavaScript, HTML, CSS, SQL, Python, R, C, Go} \\
+     \textbf{Frameworks \& Libraries}{: React, Node.js, Express.js, Tailwind CSS, Pandas, tidyverse, scikit-learn, FastAPI} \\
+     \textbf{Tools \& Platforms}{: Git, GitHub, GitHub Actions, Postman, Playwright, Jest, Linux/CLI, OpenAI API}
+    }}
+ \end{itemize}
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+    {\textbf{LiftSurfer} $|$ \emph{React Native, Expo, TypeScript, Zustand, Firebase}}{March 2026 -- Current}
+    \resumeItemListStart
+      \resumeItem{Built a cross-platform mobile port (iOS/Android) of the \textbf{open-source} OpenPowerlifting website with \textbf{30+ weekly active users}, surfacing competition data spanning \textbf{300+ federations} and \textbf{110+ nations.}}
+      \resumeItem{Implemented a filterable/sortable leaderboard with infinite scroll, lifter search with persistent history, athlete profiles with personal bests and meet history, and per-meet attempt breakdowns.}
+      \resumeItem{Consumed OpenPowerlifting's public Rankings, Search, and CSV endpoints directly with no custom backend; managed server-state caching with \textbf{TanStack Query} and global client state with \textbf{Zustand}.}
+      \resumeItem{Instrumented \textbf{Firebase Analytics} to track leaderboard filter usage and federation selections, providing behavioral insights to guide feature development.}
+      \resumeItem{Configured \textbf{GitHub Actions} CI pipeline for automated linting and code quality checks across commits.}
+    \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Cownselor} $|$ \emph{React, FastAPI, Tailwind CSS, SQLite}}{Jan 2026 -- Current}
+          \resumeItemListStart
+            \resumeItem{Built a responsive \textbf{React frontend }styled with \textbf{Tailwind CSS}, featuring an \textbf{interactive schedule builder} that generates personalized academic roadmaps.}
+            \resumeItem{Engineered a FastAPI backend that interfaces with the \textbf{Assist.org API }to aggregate complex articulation agreements and course equivalencies between institutions.}
+            \resumeItem{Developed a \textbf{web scraper} using \textbf{BeautifulSoup} and the \textbf{OpenAI API} to extract and structure De Anza College's course catalog into a JSON format mapping prerequisite chains and course equivalencies.}
+            \resumeItem{Implemented a \textbf{transcript parsing }feature allowing users to upload existing records, automatically populating their dashboard with completed credits and remaining requirements.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Student Dropout Prediction} $|$ \emph{Python, scikit-learn, Pandas}}{Jan 2026 -- Mar 2026}
+          \resumeItemListStart
+            \resumeItem{Built and compared three binary classification models (\textbf{Logistic Regression, Random Forest, XGBoost}) on a 4,424-record dataset of student demographic, financial, and academic features to identify at-risk students.}
+            \resumeItem{Engineered ratio-based features (pass rates, GPA, academic improvement, evaluation efficiency) with \textbf{Z-score normalization}; tuned hyperparameters via \textbf{GridSearchCV}, achieving \textbf{recall} of \textbf{0.811},\textbf{ ROC-AUC} of \textbf{0.917}.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Cisco Certified Network Associate (CCNA)}{: In Progress (Expected June 2026)}
+    }}
+ \end{itemize}
+
+\section{Campus Involvement}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{Aggie Barbell Club -- Powerlifting Coach}}{Jan 2023 -- Present}
+      \resumeItemListStart
+        \resumeItem{Coached 3 competitive powerlifters using data-driven fatigue analysis and volume optimization, resulting in 15\% average 1RM strength gains over first 3 months}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{ColorStack -- Active Member}}{Nov 2025 -- Present}
+  \resumeSubHeadingListEnd
+
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Lamppost Pizza}{Davis, CA}
+      {Crew Member}{Aug 2024 -- Sept 2025}
+      \resumeItemListStart
+        \resumeItem{Provided \textbf{attentive support} by responding to customer needs, resolving issues quickly, and maintaining accuracy and professionalism under pressure.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\end{document}

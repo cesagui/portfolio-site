@@ -7,6 +7,8 @@ import VistaFolder from '../assets/vista-icons/folder.ico'
 import VistaDocument from '../assets/vista-icons/text_document.ico'
 import TaskManager from '../assets/vista-icons/task_manager.ico'
 import InternetExplorer from '../assets/vista-icons/internet_explorer.ico'
+
+import OpenPL from '../assets/open_powerlifting.png'
 import { useState } from 'react'
 import DesktopIcon from './desktop_icon'
 import Window from './window/Window'
@@ -20,7 +22,7 @@ function Desktop () {
         { image: VistaNotes, name: 'Sticky Notes' },
         { image: MessengerIcon, name: 'Windows Messenger' },
         { image: TaskManager, name: 'Task Manager' },
-        { image: InternetExplorer, name: 'Internet Explorer' },
+        { image: OpenPL, name: 'OpenPowerlifting' },
         { image: InternetExplorer, name: 'Internet Explorer' },
         
         { image: InternetExplorer, name: 'Internet Explorer' },
